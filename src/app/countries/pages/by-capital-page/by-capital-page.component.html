@@ -1,1 +1,14 @@
-<p>by-capital-page works!</p>
+<h2>By Capital</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <app-search-box
+      placeholder="Search capital"
+      (onValue)="searchByCapital($event)"
+    ></app-search-box>
+  </div>
+  <div class="row">
+    <div class="col">Table of results</div>
+  </div>
+</div>
