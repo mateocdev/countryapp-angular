@@ -15,12 +15,9 @@ export class CountryPageComponent implements OnInit {
     private countriesService: CountriesService,
     private router: Router
   ) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   public country?: Country;
-  gOnInit(): void {
+  ngOnInit(): void {
     this.activateRoute.params
       .pipe(
         switchMap(({ id }) =>
@@ -31,7 +28,6 @@ export class CountryPageComponent implements OnInit {
         if (country.length === 0) {
           return this.router.navigateByUrl('');
         }
-        console.log(country);
         return (this.country = country[0]);
       });
   }
