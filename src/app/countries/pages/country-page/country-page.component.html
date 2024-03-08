@@ -1,1 +1,23 @@
-<p>country-page works!</p>
+<div>
+  <div class="alert alert-info">Loading...</div>
+</div>
+<div *ngIf="country">
+  <div class="row">
+    <div class="col-12">
+      <h2>
+        Country: <strong>{{ country?.name?.common }}</strong>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Flag</h3>
+      <img
+        [src]="country.flags.svg"
+        [alt]="country.name.common"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
+</div>
