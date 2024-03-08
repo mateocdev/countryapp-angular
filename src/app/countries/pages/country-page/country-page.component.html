@@ -1,5 +1,5 @@
 <div>
-  <div class="alert alert-info">Loading...</div>
+  <div *ngIf="!country" class="alert alert-info">Loading...</div>
 </div>
 <div *ngIf="country">
   <div class="row">
