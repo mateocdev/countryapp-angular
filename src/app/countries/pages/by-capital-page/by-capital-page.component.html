@@ -5,12 +5,13 @@
   <div class="col">
     <app-search-box
       placeholder="Search capital"
-      (onValue)="searchByCapital($event)"
+      (onDebounce)="searchByCapital($event)"
     ></app-search-box>
   </div>
   <div class="row">
     <div class="col">
       <hr />
+      <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
       <app-country-table [countries]="countries"></app-country-table>
     </div>
   </div>
