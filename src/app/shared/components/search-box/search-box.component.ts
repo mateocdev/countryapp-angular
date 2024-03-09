@@ -10,6 +10,7 @@ export class SearchBoxComponent implements OnInit {
   private debouncer: Subject<string> = new Subject();
   private debouncerSubscription?: Subscription = new Subscription();
   @Input() placeholder!: string;
+  @Input() initialValue!: string;
 
   @Output() onValue: EventEmitter<string> = new EventEmitter();
   @Output() public onDebounce: EventEmitter<string> = new EventEmitter();

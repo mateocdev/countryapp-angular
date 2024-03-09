@@ -6,6 +6,7 @@
     <app-search-box
       placeholder="Search capital"
       (onDebounce)="searchByCountry($event)"
+      [initialValue]="initialValue"
     ></app-search-box>
   </div>
   <div class="row">
